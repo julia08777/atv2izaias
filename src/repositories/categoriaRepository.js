@@ -1,0 +1,39 @@
+import { connection } from "../configs/Database.js";
+
+const categoriaRepository = {
+    criar: async (categoria) => {
+        const sql = 'INSERT INTO categorias (Nome, Descricap) VALUES (?,?);';
+        const values = [categoria.nome, categoria.descricao];
+        const [rows] = await Connection.execute(sql, values);
+        return rows;
+        
+    },
+
+     editar: async (categoria) => {
+        const sql = 'UPDATE categorias SET Nome = ?, Descricao = ? WHERE Id = ?;';
+        const values = [categoria.nome, categoria.descricao, categoria.id];
+        const [rows] = await Connection.execute(sql, values);
+        return rows;
+        
+    },
+
+
+     deletar: async (id) => {
+        const sql = 'DELETE FROM categorias WHERE Id = ?;';
+        const values = [id];
+        const [rows] = await Connection.execute(sql, values);
+        return rows;
+        
+    },
+
+
+     selecionar: async () => {
+        const sql = 'SELECT * FROM categorias;';
+        const [rows] = await Connection.execute(sql);
+        return rows;
+        
+    }
+
+}
+
+export default categoriaRepository;
