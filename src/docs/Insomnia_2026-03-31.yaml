@@ -1,0 +1,133 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: My first collection
+meta:
+  id: wrk_60fbc8a0c6eb42f4844aa6bd35923874
+  created: 1774965714039
+  modified: 1774965714039
+  description: ""
+collection:
+  - name: Categorias
+    meta:
+      id: fld_8e2face6cda44ca3b65a5a7fb7dc0274
+      created: 1774965734741
+      modified: 1774965734741
+      sortKey: -1774965734741
+      description: ""
+    children:
+      - url: localhost:8000/categorias/selecionar
+        name: selecionar
+        meta:
+          id: req_7b86aa1e69624e6fb79e346ba2a5559e
+          created: 1774965751888
+          modified: 1774969761636
+          isPrivate: false
+          description: ""
+          sortKey: -1774965751888
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/produto/criar
+        name: criar
+        meta:
+          id: req_4d1beddf3d1341ff8d6ad946e6d27d89
+          created: 1774969974971
+          modified: 1774974990694
+          isPrivate: false
+          description: ""
+          sortKey: -1774969974971
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "idCategoria": 1,
+              "nome": "Bolsa Feminina",
+              "valor": 199.90,
+              "caminhoImagem": "/imagens/bolsa.jpg"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: ""
+        name: New Request
+        meta:
+          id: req_0efe9fd290134a0f848c8144b79436b1
+          created: 1774970478206
+          modified: 1774970494508
+          isPrivate: false
+          description: ""
+          sortKey: -1774965751788
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8000/categorias/1
+        name: New Request
+        meta:
+          id: req_a95856fda81c414b9e0cb4dcdf4509fe
+          created: 1774970484018
+          modified: 1774970570439
+          isPrivate: false
+          description: ""
+          sortKey: -1774965751688
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.4.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_7870eda8de117872971919768d3a3e9944296fd0
+    created: 1774965714046
+    modified: 1774965714046
+environments:
+  name: Base Environment
+  meta:
+    id: env_7870eda8de117872971919768d3a3e9944296fd0
+    created: 1774965714041
+    modified: 1774965714041
+    isPrivate: false
